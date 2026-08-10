@@ -107,6 +107,7 @@ class _AppPhoneFieldWithCountryPickerState
         Expanded(
           child: AppTextFormField(
             fillColor: ColorsManager.darkBackground,
+            textColor: ColorsManager.surfacePrimary,
             contentPadding: EdgeInsetsGeometry.all(16),
             controller: widget.phoneController,
             hintText: widget.hintText,

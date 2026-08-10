@@ -1,5 +1,7 @@
 import 'package:barq_go/core/di/dependency_injection.dart';
 import 'package:barq_go/core/routing/routes.dart';
+import 'package:barq_go/core/widgets/main_layout/presentaion/cubit/main_layout_cubit.dart';
+import 'package:barq_go/core/widgets/main_layout/presentaion/views/main_layout.dart';
 import 'package:barq_go/features/auth/presentaion/cubit/auth_cubit.dart';
 import 'package:barq_go/features/auth/presentaion/views/login_view.dart';
 import 'package:barq_go/features/auth/presentaion/views/otp_view.dart';
@@ -35,6 +37,16 @@ class AppRouter {
       // location Policy
       case Routes.locationPolicy:
         return _fadeRoute(const LocationPolicy(), settings);
+
+      case Routes.mainLayout:
+        return _fadeRoute(
+          BlocProvider(
+            create: (context) => getIt<MainLayoutCubit>(),
+            child: const MainLayout(),
+          ),
+          settings,
+        );
+
       default:
         return MaterialPageRoute(
           builder: (_) =>

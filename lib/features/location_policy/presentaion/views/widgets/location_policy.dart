@@ -1,4 +1,6 @@
+import 'package:barq_go/core/helper/extensions.dart';
 import 'package:barq_go/core/resources/image_manager.dart';
+import 'package:barq_go/core/routing/routes.dart';
 import 'package:barq_go/core/themes/app_text_styles.dart';
 import 'package:barq_go/core/themes/colors_manager.dart';
 import 'package:barq_go/core/widgets/app_button_widget.dart';
@@ -32,6 +34,9 @@ class LocationPolicy extends StatelessWidget {
             AppButtonWidget(
               text: "use_current_location".tr(),
               textColor: ColorsManager.surfacePrimary,
+              onTap: () {
+                context.pushNamed(Routes.mainLayout);
+              },
               icon: AppSvgHandler(assetPath: Assets.assetsImagesIconsA),
             ),
             12.verticalSpace,

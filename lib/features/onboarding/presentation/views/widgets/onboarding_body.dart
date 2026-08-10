@@ -1,14 +1,12 @@
 import 'package:barq_go/core/themes/app_text_styles.dart';
 import 'package:barq_go/core/widgets/app_svg_handler.dart';
 import 'package:barq_go/features/onboarding/data/models/onboarding_model.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class OnboardingBody extends StatelessWidget {
-  const OnboardingBody({
-    super.key,
-    required this.onboardingModel,
-  });
+  const OnboardingBody({super.key, required this.onboardingModel});
 
   final OnboardingModel onboardingModel;
 
@@ -17,14 +15,12 @@ class OnboardingBody extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        AppSvgHandler(
-          assetPath: onboardingModel.imgPath,
-        ),
+        AppSvgHandler(assetPath: onboardingModel.imgPath),
 
         32.verticalSpace,
 
         Text(
-          onboardingModel.title,
+          onboardingModel.title.tr(),
           textAlign: TextAlign.center,
           style: TextStyles.textStyleExtraBold30,
         ),
@@ -32,7 +28,7 @@ class OnboardingBody extends StatelessWidget {
         14.verticalSpace,
 
         Text(
-          onboardingModel.description,
+          onboardingModel.description.tr(),
           textAlign: TextAlign.center,
           style: TextStyles.textStyleRegular16,
         ),

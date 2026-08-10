@@ -31,7 +31,11 @@
 "location_required_description": "يساعدنا موقعك في تحديد أقرب السائقين وحساب مسافة الرحلة بدقة.",
 "use_current_location": "استخدام موقعي الحالي",
 "choose_location_manually": "اختيار الموقع يدوياً",
-"location_service_not_working": "تعطّلت خدمة الموقع؟"
+"location_service_not_working": "تعطّلت خدمة الموقع؟",
+"home": "الرئيسية",
+"my_trips": "رحلاتي",
+"wallet": "المحفظة",
+"my_account": "حسابي"
 
 
 }

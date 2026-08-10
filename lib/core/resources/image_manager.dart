@@ -10,6 +10,18 @@ class Assets {
   /// assets/images/icons/m.svg
   static const String assetsImagesIconsM = "assets/images/icons/m.svg";
 
+  /// Assets for assetsImagesIconsProfile
+  /// assets/images/icons/profile.svg
+  static const String assetsImagesIconsProfile = "assets/images/icons/profile.svg";
+
+  /// Assets for assetsImagesIconsTrips
+  /// assets/images/icons/trips.svg
+  static const String assetsImagesIconsTrips = "assets/images/icons/trips.svg";
+
+  /// Assets for assetsImagesIconsWallet
+  /// assets/images/icons/wallet.svg
+  static const String assetsImagesIconsWallet = "assets/images/icons/wallet.svg";
+
   /// Assets for assetsImagesLocation
   /// assets/images/location.svg
   static const String assetsImagesLocation = "assets/images/location.svg";

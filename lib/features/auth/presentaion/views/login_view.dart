@@ -35,7 +35,7 @@ class LoginView extends StatelessWidget {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 16.w),
             child: Text(
-              "welcome_to_\nbarq_go".tr(),
+              'welcome_to_barq_go'.tr().replaceFirst(' Barq Go', '\nBarq Go'),
               style: TextStyles.textStyleExtraBold32.copyWith(
                 color: ColorsManager.surfacePrimary,
               ),

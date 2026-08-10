@@ -28,7 +28,7 @@ class OtpView extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.w),
               child: Text(
-                "enter_verification\n_code",
+                'enter_verification_code'.tr().replaceFirst(' code', '\ncode'),
                 style: TextStyles.textStyleExtraBold30.copyWith(
                   color: ColorsManager.surfacePrimary,
                 ),
@@ -37,19 +37,17 @@ class OtpView extends StatelessWidget {
             12.verticalSpace,
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.w),
-
               child: Text.rich(
                 TextSpan(
                   children: [
                     TextSpan(
-                      text: "sent_to".tr(),
+                      text: 'sent_to'.tr(),
                       style: TextStyles.textStyleRegular13.copyWith(
                         color: ColorsManager.surfacePrimary.withAlpha(40),
                       ),
                     ),
-
                     TextSpan(
-                      text: " phone_ex".tr(),
+                      text: " ${'phone_ex'.tr()}",
                       style: TextStyles.textStyleSemiBold13.copyWith(
                         color: ColorsManager.brandPrimary,
                       ),

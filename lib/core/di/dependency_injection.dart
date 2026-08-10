@@ -1,3 +1,4 @@
+import 'package:barq_go/core/widgets/main_layout/presentaion/cubit/main_layout_cubit.dart';
 import 'package:barq_go/features/auth/presentaion/cubit/auth_cubit.dart';
 
 import '../helper/session_manager.dart';
@@ -23,8 +24,10 @@ Future<void> setupGetIt() async {
     () => SessionManager(getIt<Dio>()),
   );
 
-  // Singelton Repositories
-  // Factory Cubits
+  //// Singelton Repositories and  Factory Cubits
 
+  // auth
   getIt.registerFactory<AuthCubit>(() => AuthCubit());
+  // main layout
+  getIt.registerFactory<MainLayoutCubit>(() => MainLayoutCubit());
 }

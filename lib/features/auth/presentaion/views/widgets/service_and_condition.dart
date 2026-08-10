@@ -22,19 +22,19 @@ class ServiceAndCondition extends StatelessWidget {
               ),
             ),
             TextSpan(
-              text: " terms_of_use".tr(),
+              text: "terms_of_use".tr(),
               style: TextStyles.textStyleRegular11.copyWith(
                 color: ColorsManager.brandPrimary,
               ),
             ),
             TextSpan(
-              text: " and".tr(),
+              text: "and".tr(),
               style: TextStyles.textStyleRegular11.copyWith(
                 color: ColorsManager.surfacePrimary.withAlpha(30),
               ),
             ),
             TextSpan(
-              text: " privacy_policy".tr(),
+              text: "privacy_policy".tr(),
               style: TextStyles.textStyleRegular11.copyWith(
                 color: ColorsManager.brandPrimary,
               ),

@@ -11,4 +11,6 @@ class Routes {
   static const String otp = 'otp';
   // locatio policy
   static const String locationPolicy = 'LocationPolicy';
+  // main layout
+  static const String mainLayout = 'mainLayout';
 }
