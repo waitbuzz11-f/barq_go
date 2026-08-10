@@ -1,0 +1,27 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+class OnboardingCubit extends Cubit<int> {
+  OnboardingCubit() : super(0);
+
+  final PageController pageController = PageController();
+
+  int get currentIndex => state;
+
+  void onPageChanged(int index) {
+    emit(index);
+  }
+
+  void nextPage() {
+    pageController.nextPage(
+      duration: const Duration(milliseconds: 300),
+      curve: Curves.easeInOut,
+    );
+  }
+
+  @override
+  Future<void> close() {
+    pageController.dispose();
+    return super.close();
+  }
+}
