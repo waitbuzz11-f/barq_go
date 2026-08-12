@@ -8,6 +8,6 @@ abstract final class AppTheme {
     useMaterial3: true,
     brightness: Brightness.light,
     scaffoldBackgroundColor: ColorsManager.background,
-    fontFamily: FontFamily.arbFonts,
+    fontFamily: FontFamily.ibmFont,
   );
 }

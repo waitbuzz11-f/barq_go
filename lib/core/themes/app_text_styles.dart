@@ -9,7 +9,7 @@ abstract final class TextStyles {
 
   static TextStyle _style({required double size, required FontWeight weight}) {
     return TextStyle(
-      fontFamily: FontFamily.arbFonts,
+      fontFamily: FontFamily.ibmFont,
       fontSize: size.sp,
       fontWeight: weight,
     );

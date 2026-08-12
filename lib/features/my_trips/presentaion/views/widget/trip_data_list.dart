@@ -68,7 +68,6 @@ class TripDataCard extends StatelessWidget {
               ),
 
               10.horizontalSpace,
-
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
