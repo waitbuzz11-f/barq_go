@@ -1,3 +1,5 @@
+import 'package:barq_go/core/helper/extensions.dart';
+import 'package:barq_go/core/routing/routes.dart';
 import 'package:barq_go/core/themes/colors_manager.dart';
 import 'package:barq_go/core/widgets/app_button_widget.dart';
 import 'package:barq_go/features/onboarding/data/dummy_data/dummy_data.dart';
@@ -20,7 +22,7 @@ class OnboardingHeader extends StatelessWidget {
           text: 'skip'.tr(),
           backgroundColor: ColorsManager.darkLight.withAlpha(12),
           onTap: () {
-            // Navigate
+            context.pushNamed(Routes.login);
           },
         ),
 

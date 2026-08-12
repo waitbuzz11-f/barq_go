@@ -66,7 +66,7 @@ class AppTextFormField extends StatelessWidget {
     this.autovalidateMode,
     this.contentPadding = const EdgeInsets.symmetric(
       horizontal: 16,
-      vertical: 10,
+      vertical: 16,
     ),
   });
 
@@ -109,9 +109,9 @@ class AppTextFormField extends StatelessWidget {
       style: TextStyles.textStyleRegular14.copyWith(color: textColor),
       decoration: InputDecoration(
         hintText: hintText,
-        hintStyle: TextStyles.textStyleRegular14.copyWith(color: hintColor),
+        hintStyle: TextStyles.textStyleSemiBold15.copyWith(color: hintColor),
         filled: true,
-        fillColor: fillColor ?? Colors.white,
+        fillColor: fillColor ?? ColorsManager.surfaceSecondary,
         isDense: true,
         contentPadding: contentPadding,
 

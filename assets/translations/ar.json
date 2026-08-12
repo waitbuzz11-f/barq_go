@@ -35,7 +35,21 @@
 "home": "الرئيسية",
 "my_trips": "رحلاتي",
 "wallet": "المحفظة",
-"my_account": "حسابي"
+"my_account": "حسابي",
+"your_current_location": "موقعك الحالي",
+"salmiya_kuwait": "السالمية، الكويت",
+"where_do_you_want_to_go": "إلى أين تريد الذهاب؟",
+"select_pickup_location": "حدد موقع الانطلاق",
+"detect_your_location": "تحديد موقعك",
+"move_map_to_select_location": "📍 حرّك الخريطة لتحديد موقعك بدقة",
+"confirm_pickup_location": "تأكيد موقع الانطلاق",
+"start_from_your_current_location": "الانطلاق من موقعك الحالي",
+"hawally_street_17": "حولي، شارع 17",
+"work": "العمل",
+"sharq_al_bahriya_tower": "الشرق، برج البحرية",
+"recent_destinations": "الوجهات الأخيرة",
+"completed_trips": "رحلات مكتملة",
+"total_spending": "إجمالي الإنفاق"
 
 
 }

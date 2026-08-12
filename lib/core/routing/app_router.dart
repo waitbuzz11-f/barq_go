@@ -5,7 +5,10 @@ import 'package:barq_go/core/widgets/main_layout/presentaion/views/main_layout.d
 import 'package:barq_go/features/auth/presentaion/cubit/auth_cubit.dart';
 import 'package:barq_go/features/auth/presentaion/views/login_view.dart';
 import 'package:barq_go/features/auth/presentaion/views/otp_view.dart';
+import 'package:barq_go/features/detect_location/presentaion/views/detect_location_view.dart';
+import 'package:barq_go/features/home/presentaion/views/home_view.dart';
 import 'package:barq_go/features/location_policy/presentaion/views/widgets/location_policy.dart';
+import 'package:barq_go/features/my_trips/presentaion/views/my_trips_view.dart';
 import 'package:barq_go/features/onboarding/presentation/views/omboarding_view.dart';
 import 'package:barq_go/features/splash/presenation/views/splash_view.dart';
 import 'package:flutter/material.dart';
@@ -37,7 +40,7 @@ class AppRouter {
       // location Policy
       case Routes.locationPolicy:
         return _fadeRoute(const LocationPolicy(), settings);
-
+      // main layout
       case Routes.mainLayout:
         return _fadeRoute(
           BlocProvider(
@@ -46,7 +49,24 @@ class AppRouter {
           ),
           settings,
         );
-
+      // home
+      case Routes.home:
+        return _fadeRoute(
+          BlocProvider(
+            create: (context) => getIt<MainLayoutCubit>(),
+            child: const HomeView(),
+          ),
+          settings,
+        );
+      // detect location
+      case Routes.detectLocation:
+        return _fadeRoute(
+          const DetectLocationView(),
+          settings,
+        );
+      // my trips
+      case Routes.myTrips:
+        return _fadeRoute(const MyTripsView(), settings);
       default:
         return MaterialPageRoute(
           builder: (_) =>

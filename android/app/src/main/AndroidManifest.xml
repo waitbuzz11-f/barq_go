@@ -3,6 +3,9 @@
         android:label="barq_go"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+
+        <meta-data android:name="com.google.android.geo.API_KEY"
+              android:value="AIzaSyB0XkqwcY-2ZCGTVuKJvMAip3oc4j3RVgU"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"
