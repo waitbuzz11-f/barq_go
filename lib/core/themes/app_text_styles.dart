@@ -22,14 +22,16 @@ abstract final class TextStyles {
       _style(size: 12, weight: FontWeightHelper.regular);
   static TextStyle get textStyleRegular14 =>
       _style(size: 14, weight: FontWeightHelper.regular);
+  static TextStyle get textStyleRegular15 =>
+      _style(size: 15, weight: FontWeightHelper.regular);
   static TextStyle get textStyleRegular16 =>
       _style(size: 16, weight: FontWeightHelper.regular);
   static TextStyle get textStyleRegular13 =>
       _style(size: 13, weight: FontWeightHelper.regular);
 
   // Medium
-  static TextStyle get textStyleMedium12 =>
-      _style(size: 12, weight: FontWeightHelper.medium);
+  static TextStyle get textStyleMedium11 =>
+      _style(size: 11, weight: FontWeightHelper.medium);
 
   // Semi Bold
   static TextStyle get textStyleSemiBold11 =>
@@ -58,14 +60,21 @@ abstract final class TextStyles {
       _style(size: 16, weight: FontWeightHelper.bold);
   static TextStyle get textStyleBold17 =>
       _style(size: 17, weight: FontWeightHelper.bold);
-
+  static TextStyle get textStyleBold18 =>
+      _style(size: 18, weight: FontWeightHelper.bold);
+  static TextStyle get textStyleBold20 =>
+      _style(size: 20, weight: FontWeightHelper.bold);
   static TextStyle get textStyleBold24 =>
       _style(size: 24, weight: FontWeightHelper.bold);
+  static TextStyle get textStyleBold26 =>
+      _style(size: 26, weight: FontWeightHelper.bold);
+  static TextStyle get textStyleBold32 =>
+      _style(size: 32, weight: FontWeightHelper.bold);
   static TextStyle get textStyleBold34 =>
       _style(size: 34, weight: FontWeightHelper.bold);
 
   // Extra Bold
- static TextStyle get textStyleExtraBold14 =>
+  static TextStyle get textStyleExtraBold14 =>
       _style(size: 14, weight: FontWeightHelper.extraBold);
   static TextStyle get textStyleExtraBold16 =>
       _style(size: 16, weight: FontWeightHelper.extraBold);
@@ -78,4 +87,6 @@ abstract final class TextStyles {
       _style(size: 30, weight: FontWeightHelper.extraBold);
   static TextStyle get textStyleExtraBold32 =>
       _style(size: 32, weight: FontWeightHelper.extraBold);
+  static TextStyle get textStyleExtraBold36 =>
+      _style(size: 36, weight: FontWeightHelper.extraBold);
 }

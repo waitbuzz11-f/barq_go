@@ -49,7 +49,61 @@
 "sharq_al_bahriya_tower": "الشرق، برج البحرية",
 "recent_destinations": "الوجهات الأخيرة",
 "completed_trips": "رحلات مكتملة",
-"total_spending": "إجمالي الإنفاق"
+"total_spending": "إجمالي الإنفاق",
+"wallet_balance": "رصيد المحفظة",
+"recharge": "شحن",
+"payment_history": "سجل الدفع",
+"transfer": "تحويل", 
+"payment_methods": "وسائل الدفع",
+"manage": "إدارة", 
+"recent_transactions": "المعاملات الأخيرة",
+"view_all": "عرض الكل", 
+"transaction_amount": "8.500 د.ك",
+"balance_added_successfully": "تمت إضافة {amount} د.ك إلى محفظتك بنجاح.",
+"new_balance": "الرصيد الجديد:",
+"wallet_recharged_successfully": "تم شحن المحفظة!",
+"back_to_wallet": "العودة إلى المحفظة",
+ "driver_name": "محمد الرشيدي",
+  "driver_phone": "+965 5X XXX XXXX",
+  "driver_rating_member_since": "4.8 • عضو منذ 2024",
+   "personal_information": "البيانات الشخصية",
+  "name_email_phone": "الاسم، البريد، الهاتف",
+  "full_name": "الاسم الكامل",
+  "email": "البريد الإلكتروني",
+  "full_name_hint": "أدخل الاسم الكامل",
+  "phone_number_hint": "أدخل رقم الهاتف",
+  "email_hint": "أدخل البريد الإلكتروني", 
+    "change_photo": "تغيير الصورة",
+      "save_changes": "حفظ التغييرات",
+  "saved_locations": "مواقعي المحفوظة",
+  "trusted_contacts": "جهات الاتصال الموثوقة",
+  "referral_program": "برنامج الإحالة",
+  "color_palette": "Color Palette",
+  "notifications": "الإشعارات",
+  "settings": "الإعدادات",
+  "help_support": "المساعدة والدعم",
+  "terms_privacy": "الشروط والخصوصية",
+  "logout": "تسجيل الخروج",
+  "safety_center": "مركز الأمان",
+   "personal_information_subtitle": "الاسم، البريد، الهاتف",
+  "saved_locations_subtitle": "المنزل، العمل، والمزيد",
+  "trusted_contacts_subtitle": "3 جهات موثوقة",
+  "payment_methods_subtitle": "نقداً، Apple Pay",
+  "referral_program_subtitle": "ادعُ أصدقاءك واربح رصيداً",
+  "color_palette_subtitle": "Brand colors & tokens",
+  "safety_center_subtitle": "الطوارئ، جهات الثقة",
+  "notifications_subtitle": "العروض، الرحلات، الدفع",
+  "settings_subtitle": "اللغة، الخصوصية، الأمان",
+  "help_support_subtitle": "الأسئلة الشائعة، تواصل معنا",
+  "terms_privacy_subtitle": "شروط الاستخدام، سياسة الخصوصية",
+  "home_address": "حولي، شارع 17، قطعة 4",
+    "add_new_location": "إضافة موقع جديد"
+
+
+
+
+
+
 
 
 }

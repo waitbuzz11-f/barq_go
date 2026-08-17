@@ -19,4 +19,17 @@ class Routes {
   static const String detectLocation = 'detectLocation';
   // my trips
   static const String myTrips = 'myTrips';
+  // wallet
+  static const String wallet = 'wallet';
+  // add balance
+  static const String addBalance = 'addBalance';
+  // add balance status
+  static const String addBalanceStatus = 'addBalanceStatus';
+  // profile
+  static const String profileView = 'profileView';
+  // edit profile
+  static const String editProfile = 'editProfile';
+  // saved location 
+  static const String savedLocation = 'savedLocation';
+
 }

@@ -84,7 +84,28 @@ class TripDataCard extends StatelessWidget {
                 ),
               ),
 
-              Text(value, style: TextStyles.textStyleExtraBold14),
+              Column(
+                children: [
+                  Text(value, style: TextStyles.textStyleExtraBold14),
+                  Container(
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 8.w,
+                      vertical: 4.h,
+                    ),
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      color: ColorsManager.success,
+                      borderRadius: BorderRadius.circular(12.r),
+                    ),
+                    child: Text(
+                      subTitle,
+                      style: TextStyles.textStyleRegular11.copyWith(
+                        color: ColorsManager.textSecondary,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
 

@@ -5,6 +5,8 @@ import 'package:barq_go/core/widgets/app_svg_handler.dart';
 import 'package:barq_go/core/widgets/main_layout/presentaion/cubit/main_layout_cubit.dart';
 import 'package:barq_go/features/home/presentaion/views/home_view.dart';
 import 'package:barq_go/features/my_trips/presentaion/views/my_trips_view.dart';
+import 'package:barq_go/features/profile/presentaion/views/profile_view.dart';
+import 'package:barq_go/features/wallet/presentaion/views/wallet_view.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -18,8 +20,8 @@ class MainLayout extends StatelessWidget {
     final List<Widget> screens = const [
       HomeView(),
       MyTripsView(),
-      SizedBox(),
-      SizedBox(),
+      WalletView(),
+      ProfileView(),
     ];
 
     return BlocProvider(

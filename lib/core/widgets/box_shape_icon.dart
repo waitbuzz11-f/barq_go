@@ -8,18 +8,21 @@ class BoxShapeIcon extends StatelessWidget {
     required this.boxColor,
     required this.assetPath,
     this.onTap,
+    this.paddingValue = 10,
   });
+
   final Color boxColor;
   final String assetPath;
   final VoidCallback? onTap;
+  final double paddingValue;
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
+      borderRadius: BorderRadius.circular(22.r),
       child: Container(
-        width: 36.w,
-        height: 36.h,
-        padding: EdgeInsets.all(10.r),
+        padding: EdgeInsets.all(paddingValue.r),
         decoration: BoxDecoration(
           color: boxColor,
           borderRadius: BorderRadius.circular(18.r),
