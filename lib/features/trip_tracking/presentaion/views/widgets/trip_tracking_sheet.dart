@@ -70,12 +70,9 @@ class _TripTrackingSheetState extends State<TripTrackingSheet> {
             slivers: [
               SliverFillRemaining(
                 hasScrollBody: true,
-                child: AnimatedSwitcher(
-                  duration: const Duration(milliseconds: 250),
-                  child: KeyedSubtree(
-                    key: widget.contentKey,
-                    child: widget.content,
-                  ),
+                child: KeyedSubtree(
+                  key: widget.contentKey,
+                  child: widget.content,
                 ),
               ),
             ],

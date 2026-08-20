@@ -11,7 +11,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TripCompletedContent extends StatelessWidget {
   const TripCompletedContent({super.key, this.makeReview});
-  final Function()? makeReview;
+  final VoidCallback? makeReview;
   @override
   Widget build(BuildContext context) {
     return Column(
