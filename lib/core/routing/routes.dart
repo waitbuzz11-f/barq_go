@@ -29,7 +29,12 @@ class Routes {
   static const String profileView = 'profileView';
   // edit profile
   static const String editProfile = 'editProfile';
-  // saved location 
+  // saved location
   static const String savedLocation = 'savedLocation';
-
+  // trusted contacts
+  static const String trustedContscts = 'trustedContscts';
+  // referral program
+  static const String referralProgram = 'referralProgram';
+  // notifications
+  static const String notification = 'notification';
 }

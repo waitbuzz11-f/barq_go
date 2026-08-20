@@ -1,4 +1,6 @@
+import 'package:barq_go/core/helper/extensions.dart';
 import 'package:barq_go/core/resources/image_manager.dart';
+import 'package:barq_go/core/routing/routes.dart';
 import 'package:barq_go/core/themes/app_text_styles.dart';
 import 'package:barq_go/core/themes/colors_manager.dart';
 import 'package:barq_go/core/widgets/app_svg_handler.dart';
@@ -44,14 +46,24 @@ class MapHeader extends StatelessWidget {
             ),
           ),
           12.horizontalSpace,
-          BoxShapeIcon(
-            boxColor: ColorsManager.surfaceSecondary,
-            assetPath: Assets.assetsImagesIconsNotification,
+          InkWell(
+            onTap: () {
+              context.pushNamed(Routes.notification);
+            },
+            child: BoxShapeIcon(
+              boxColor: ColorsManager.surfaceSecondary,
+              assetPath: Assets.assetsImagesIconsNotification,
+            ),
           ),
           10.horizontalSpace,
-          BoxShapeIcon(
-            boxColor: ColorsManager.surfaceSecondary,
-            assetPath: Assets.assetsImagesIconsProfile,
+          InkWell(
+            onTap: () {
+              context.pushNamed(Routes.editProfile);
+            },
+            child: BoxShapeIcon(
+              boxColor: ColorsManager.surfaceSecondary,
+              assetPath: Assets.assetsImagesIconsProfile,
+            ),
           ),
         ],
       ),

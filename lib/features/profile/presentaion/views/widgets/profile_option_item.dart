@@ -45,6 +45,7 @@ class ProfileOptionsItem extends StatelessWidget {
             border: isLogout ? Border.all(color: logoutColor, width: 1) : null,
           ),
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               isLogout
                   ? Container(
@@ -63,28 +64,25 @@ class ProfileOptionsItem extends StatelessWidget {
                     ),
 
               12.horizontalSpace,
-
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    title.tr(),
+                    style: TextStyles.textStyleSemiBold14.copyWith(
+                      color: isLogout ? logoutColor : null,
+                    ),
+                  ),
+                  if (subTitle.isNotEmpty) ...[
+                    4.verticalSpace,
                     Text(
-                      title.tr(),
-                      style: TextStyles.textStyleSemiBold14.copyWith(
-                        color: isLogout ? logoutColor : null,
+                      subTitle.tr(),
+                      style: TextStyles.textStyleSemiBold12.copyWith(
+                        color: ColorsManager.textSecondary,
                       ),
                     ),
-                    if (subTitle.isNotEmpty) ...[
-                      4.verticalSpace,
-                      Text(
-                        subTitle.tr(),
-                        style: TextStyles.textStyleSemiBold12.copyWith(
-                          color: ColorsManager.textSecondary,
-                        ),
-                      ),
-                    ],
                   ],
-                ),
+                ],
               ),
 
               12.horizontalSpace,

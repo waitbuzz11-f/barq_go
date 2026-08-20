@@ -9,13 +9,14 @@ class BoxShapeIcon extends StatelessWidget {
     required this.assetPath,
     this.onTap,
     this.paddingValue = 10,
+    this.assetColor,
   });
 
   final Color boxColor;
   final String assetPath;
   final VoidCallback? onTap;
   final double paddingValue;
-
+  final Color? assetColor;
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -27,7 +28,7 @@ class BoxShapeIcon extends StatelessWidget {
           color: boxColor,
           borderRadius: BorderRadius.circular(18.r),
         ),
-        child: AppSvgHandler(assetPath: assetPath),
+        child: AppSvgHandler(assetPath: assetPath, color: assetColor, ),
       ),
     );
   }

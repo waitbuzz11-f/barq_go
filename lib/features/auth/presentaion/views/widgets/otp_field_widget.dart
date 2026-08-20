@@ -108,7 +108,7 @@ class _OtpFieldWidgetState extends State<OtpFieldWidget> {
 
             if (isTimeOut)
               AppButtonWidget(
-                text: 'resend_code'.tr(),
+                text: 'resend_code',
                 width: 138.w,
                 backgroundColor: ColorsManager.brandPrimary.withAlpha(10),
                 textColor: ColorsManager.brandPrimary,

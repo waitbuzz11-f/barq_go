@@ -7,15 +7,19 @@ import 'package:barq_go/features/add_balance/presentaion/view/add_balance_view.d
 import 'package:barq_go/features/auth/presentaion/cubit/auth_cubit.dart';
 import 'package:barq_go/features/auth/presentaion/views/login_view.dart';
 import 'package:barq_go/features/auth/presentaion/views/otp_view.dart';
-import 'package:barq_go/features/detect_location/presentaion/views/detect_location_view.dart';
+import 'package:barq_go/features/trip_tracking/presentaion/cubit/trip_tracking_cubit.dart';
+import 'package:barq_go/features/trip_tracking/presentaion/views/trip_tracking_view.dart';
 import 'package:barq_go/features/edit_profile.dart/presentaion/views/edit_profile_view.dart';
 import 'package:barq_go/features/home/presentaion/views/home_view.dart';
 import 'package:barq_go/features/location_policy/presentaion/views/widgets/location_policy.dart';
 import 'package:barq_go/features/my_trips/presentaion/views/my_trips_view.dart';
+import 'package:barq_go/features/notification/presentaion/views/notification_view.dart';
 import 'package:barq_go/features/onboarding/presentation/views/omboarding_view.dart';
 import 'package:barq_go/features/profile/presentaion/views/profile_view.dart';
+import 'package:barq_go/features/referral_program/presentaion/views/referral_program_view.dart';
 import 'package:barq_go/features/saved_location/presentaion/views/saved_location_view.dart';
 import 'package:barq_go/features/splash/presenation/views/splash_view.dart';
+import 'package:barq_go/features/trusted_contacts/presentaion/views/trusted_contacts_view.dart';
 import 'package:barq_go/features/wallet/presentaion/views/wallet_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -66,7 +70,13 @@ class AppRouter {
         );
       // detect location
       case Routes.detectLocation:
-        return _fadeRoute(const DetectLocationView(), settings);
+        return _fadeRoute(
+          BlocProvider(
+            create: (context) => TripTrackingCubit(),
+            child: const TripTrackingView(),
+          ),
+          settings,
+        );
       // my trips
       case Routes.myTrips:
         return _fadeRoute(
@@ -103,7 +113,7 @@ class AppRouter {
           ),
           settings,
         );
-  
+
       // edit profile
       case Routes.editProfile:
         return _fadeRoute(const EditProfileView(), settings);
@@ -111,6 +121,18 @@ class AppRouter {
       // saved location
       case Routes.savedLocation:
         return _fadeRoute(const SavedLocationView(), settings);
+
+      // trusted contacts
+      case Routes.trustedContscts:
+        return _fadeRoute(const TrustedContactsView(), settings);
+
+      // referral program
+      case Routes.referralProgram:
+        return _fadeRoute(const ReferralProgramView(), settings);
+
+      // notfications
+      case Routes.notification:
+        return _fadeRoute(const NotificationView(), settings);
       default:
         return MaterialPageRoute(
           builder: (_) =>

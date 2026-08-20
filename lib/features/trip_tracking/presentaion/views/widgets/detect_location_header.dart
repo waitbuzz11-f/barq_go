@@ -1,4 +1,3 @@
-import 'package:barq_go/core/helper/extensions.dart';
 import 'package:barq_go/core/themes/app_text_styles.dart';
 import 'package:barq_go/core/themes/colors_manager.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -6,16 +5,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class DetectLocationHeader extends StatelessWidget {
-  const DetectLocationHeader({super.key});
+  const DetectLocationHeader({
+    super.key,
+    required this.titleKey,
+    required this.onBack,
+  });
+
+  final String titleKey;
+  final VoidCallback onBack;
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         InkWell(
-          onTap: () {
-            context.pop();
-          },
+          onTap: onBack,
           child: Container(
             padding: EdgeInsets.all(10.r),
             decoration: BoxDecoration(
@@ -33,10 +37,7 @@ class DetectLocationHeader extends StatelessWidget {
             borderRadius: BorderRadius.circular(16.r),
             color: ColorsManager.surfacePrimary,
           ),
-          child: Text(
-            "select_pickup_location".tr(),
-            style: TextStyles.textStyleBold15,
-          ),
+          child: Text(titleKey.tr(), style: TextStyles.textStyleBold15),
         ),
       ],
     );

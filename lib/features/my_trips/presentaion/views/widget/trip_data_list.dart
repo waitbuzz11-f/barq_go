@@ -55,15 +55,15 @@ class TripDataCard extends StatelessWidget {
                 width: 40.w,
                 height: 40.h,
                 alignment: Alignment.center,
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: ColorsManager.success,
+                  color: ColorsManager.success.withAlpha(40),
                 ),
                 child: Image.asset(
                   Assets.assetsImagesPngPackge,
                   width: 22.w,
                   height: 22.h,
-                  color: ColorsManager.background,
+                  color: ColorsManager.darkBackground,
                 ),
               ),
 
@@ -94,7 +94,7 @@ class TripDataCard extends StatelessWidget {
                     ),
                     alignment: Alignment.center,
                     decoration: BoxDecoration(
-                      color: ColorsManager.success,
+                      color: ColorsManager.success.withAlpha(13),
                       borderRadius: BorderRadius.circular(12.r),
                     ),
                     child: Text(

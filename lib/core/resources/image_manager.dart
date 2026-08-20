@@ -26,6 +26,10 @@ class Assets {
   /// assets/images/icons/camera.svg
   static const String assetsImagesIconsCamera = "assets/images/icons/camera.svg";
 
+  /// Assets for assetsImagesIconsChat
+  /// assets/images/icons/chat.svg
+  static const String assetsImagesIconsChat = "assets/images/icons/chat.svg";
+
   /// Assets for assetsImagesIconsCircle
   /// assets/images/icons/circle.svg
   static const String assetsImagesIconsCircle = "assets/images/icons/circle.svg";
@@ -33,6 +37,10 @@ class Assets {
   /// Assets for assetsImagesIconsColorsPaleet
   /// assets/images/icons/colors_paleet.svg
   static const String assetsImagesIconsColorsPaleet = "assets/images/icons/colors_paleet.svg";
+
+  /// Assets for assetsImagesIconsCopy
+  /// assets/images/icons/copy.svg
+  static const String assetsImagesIconsCopy = "assets/images/icons/copy.svg";
 
   /// Assets for assetsImagesIconsDelete
   /// assets/images/icons/delete.svg
@@ -110,6 +118,18 @@ class Assets {
   /// assets/images/icons/settings.svg
   static const String assetsImagesIconsSettings = "assets/images/icons/settings.svg";
 
+  /// Assets for assetsImagesIconsShare
+  /// assets/images/icons/share.svg
+  static const String assetsImagesIconsShare = "assets/images/icons/share.svg";
+
+  /// Assets for assetsImagesIconsStar
+  /// assets/images/icons/star.svg
+  static const String assetsImagesIconsStar = "assets/images/icons/star.svg";
+
+  /// Assets for assetsImagesIconsStartTrip
+  /// assets/images/icons/start_trip.svg
+  static const String assetsImagesIconsStartTrip = "assets/images/icons/start_trip.svg";
+
   /// Assets for assetsImagesIconsSuccess
   /// assets/images/icons/success.svg
   static const String assetsImagesIconsSuccess = "assets/images/icons/success.svg";
@@ -154,6 +174,10 @@ class Assets {
   /// assets/images/png/car.png
   static const String assetsImagesPngCar = "assets/images/png/car.png";
 
+  /// Assets for assetsImagesPngCarEx
+  /// assets/images/png/car_ex.png
+  static const String assetsImagesPngCarEx = "assets/images/png/car_ex.png";
+
   /// Assets for assetsImagesPngHome
   /// assets/images/png/home.png
   static const String assetsImagesPngHome = "assets/images/png/home.png";
@@ -173,5 +197,13 @@ class Assets {
   /// Assets for assetsImagesPngTard
   /// assets/images/png/tard.png
   static const String assetsImagesPngTard = "assets/images/png/tard.png";
+
+  /// Assets for assetsImagesPrize
+  /// assets/images/prize.svg
+  static const String assetsImagesPrize = "assets/images/prize.svg";
+
+  /// Assets for assetsImagesTripCompletedSuccess
+  /// assets/images/trip_completed_success.svg
+  static const String assetsImagesTripCompletedSuccess = "assets/images/trip_completed_success.svg";
 }
 
