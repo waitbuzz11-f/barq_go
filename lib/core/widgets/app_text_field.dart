@@ -1,3 +1,5 @@
+import 'package:easy_localization/easy_localization.dart';
+
 import '../themes/app_text_styles.dart';
 import '../themes/colors_manager.dart';
 import 'package:flutter/material.dart';
@@ -108,7 +110,7 @@ class AppTextFormField extends StatelessWidget {
       cursorColor: ColorsManager.brandPrimary,
       style: TextStyles.textStyleRegular14.copyWith(color: textColor),
       decoration: InputDecoration(
-        hintText: hintText,
+        hintText: hintText.tr(),
         hintStyle: TextStyles.textStyleSemiBold15.copyWith(color: hintColor),
         filled: true,
         fillColor: fillColor ?? ColorsManager.surfaceSecondary,

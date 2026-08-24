@@ -3,6 +3,7 @@ import 'package:barq_go/core/themes/app_text_styles.dart';
 import 'package:barq_go/core/themes/colors_manager.dart';
 import 'package:barq_go/core/widgets/app_svg_handler.dart';
 import 'package:barq_go/core/widgets/box_shape_icon.dart';
+import 'package:barq_go/core/widgets/custtom_warning_sheet.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -23,11 +24,10 @@ class ProfileOptionsItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final bool isArabic = context.locale.languageCode == "ar";
-    final bool isLogout = title == "logout";
+    final isArabic = context.locale.languageCode == 'ar';
+    final isLogout = title == 'logout';
 
-    const Color logoutColor = Color(0xFFDC2626);
-
+    const logoutColor = Color(0xFFDC2626);
     final borderRadius = BorderRadius.circular(16.r);
 
     return Material(
@@ -36,7 +36,26 @@ class ProfileOptionsItem extends StatelessWidget {
           : ColorsManager.surfacePrimary,
       borderRadius: borderRadius,
       child: InkWell(
-        onTap: onTap,
+        onTap: () {
+          if (isLogout) {
+            showModalBottomSheet(
+              context: context,
+              isScrollControlled: true,
+              backgroundColor: Colors.transparent,
+              builder: (_) {
+                return const CustomWarningSheet(
+                  title: 'are_you_sure_want_logout',
+                  subTitle: 'logout_confirmation_subtitle',
+                  confuirmButtonTitle: 'logout',
+                );
+              },
+            );
+
+            return;
+          }
+
+          onTap();
+        },
         borderRadius: borderRadius,
         child: Container(
           padding: EdgeInsets.all(16.r),
@@ -45,7 +64,6 @@ class ProfileOptionsItem extends StatelessWidget {
             border: isLogout ? Border.all(color: logoutColor, width: 1) : null,
           ),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               isLogout
                   ? Container(
@@ -64,36 +82,44 @@ class ProfileOptionsItem extends StatelessWidget {
                     ),
 
               12.horizontalSpace,
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    title.tr(),
-                    style: TextStyles.textStyleSemiBold14.copyWith(
-                      color: isLogout ? logoutColor : null,
-                    ),
-                  ),
-                  if (subTitle.isNotEmpty) ...[
-                    4.verticalSpace,
+
+              Expanded(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
                     Text(
-                      subTitle.tr(),
-                      style: TextStyles.textStyleSemiBold12.copyWith(
-                        color: ColorsManager.textSecondary,
+                      title.tr(),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyles.textStyleSemiBold14.copyWith(
+                        color: isLogout ? logoutColor : null,
                       ),
                     ),
+                    if (subTitle.isNotEmpty) ...[
+                      4.verticalSpace,
+                      Text(
+                        subTitle.tr(),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyles.textStyleSemiBold12.copyWith(
+                          color: ColorsManager.textSecondary,
+                        ),
+                      ),
+                    ],
                   ],
-                ],
+                ),
               ),
 
-              12.horizontalSpace,
-
-              if (!isLogout)
+              if (!isLogout) ...[
+                12.horizontalSpace,
                 Transform.scale(
                   scaleX: isArabic ? -1 : 1,
                   child: AppSvgHandler(
                     assetPath: Assets.assetsImagesIconsArrBackRight,
                   ),
                 ),
+              ],
             ],
           ),
         ),

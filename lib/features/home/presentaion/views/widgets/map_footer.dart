@@ -79,6 +79,7 @@ class MapFooter extends StatelessWidget {
                   color: ColorsManager.textSecondary,
                 ),
               ),
+              12.verticalSpace,
               RecentDestinationsList(),
             ],
           ),

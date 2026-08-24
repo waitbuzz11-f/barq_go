@@ -16,6 +16,7 @@ class LocationSugestionContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         AppTextFormField(
@@ -32,33 +33,36 @@ class LocationSugestionContent extends StatelessWidget {
             color: ColorsManager.textSecondary,
           ),
         ),
-        Expanded(
-          child: ListView.separated(
-            shrinkWrap: true,
-            itemBuilder: (context, index) {
-              return InkWell(
-                onTap: () => onLocationSelected(index),
-                child: Padding(
-                  padding: EdgeInsets.symmetric(vertical: 8.h),
-                  child: Row(
-                    children: [
-                      BoxShapeIcon(
-                        boxColor: ColorsManager.surfaceSecondary,
-                        assetPath: Assets.assetsImagesIconsLocation,
-                        assetColor: ColorsManager.darkBackground,
-                      ),
-                      12.horizontalSpace,
-                      Text("location", style: TextStyles.textStyleSemiBold14),
-                    ],
-                  ),
+        ListView.separated(
+          shrinkWrap: true,
+          physics: const NeverScrollableScrollPhysics(),
+          padding: EdgeInsets.zero,
+          itemBuilder: (context, index) {
+            return InkWell(
+              onTap: () => onLocationSelected(index),
+              child: Padding(
+                padding: EdgeInsets.symmetric(vertical: 8.h),
+                child: Row(
+                  children: [
+                    BoxShapeIcon(
+                      boxColor: ColorsManager.surfaceSecondary,
+                      assetPath: Assets.assetsImagesIconsLocation,
+                      assetColor: ColorsManager.darkBackground,
+                    ),
+                    12.horizontalSpace,
+                    Text(
+                      "location".tr(),
+                      style: TextStyles.textStyleSemiBold14,
+                    ),
+                  ],
                 ),
-              );
-            },
-            separatorBuilder: (context, index) {
-              return Divider(color: ColorsManager.darkLight.withAlpha(6));
-            },
-            itemCount: 3,
-          ),
+              ),
+            );
+          },
+          separatorBuilder: (context, index) {
+            return Divider(color: ColorsManager.darkLight.withAlpha(6));
+          },
+          itemCount: 3,
         ),
       ],
     );

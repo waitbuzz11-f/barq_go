@@ -38,12 +38,12 @@ class TripCompletedContent extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                "distance",
+                "distance".tr(),
                 style: TextStyles.textStyleRegular13.copyWith(
                   color: ColorsManager.textSecondary,
                 ),
               ),
-              Text("trip_distance", style: TextStyles.textStyleSemiBold13),
+              Text("trip_distance".tr(), style: TextStyles.textStyleSemiBold13),
             ],
           ),
         ),

@@ -68,7 +68,7 @@ class TripReviewContent extends StatelessWidget {
 
         16.verticalSpace,
 
-        AppTextFormField(hintText: "add_comment_optional"),
+        AppTextFormField(hintText: "add_comment_optional".tr()),
 
         8.verticalSpace,
 

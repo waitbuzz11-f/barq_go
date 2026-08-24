@@ -70,7 +70,7 @@ class TripDetailsContent extends StatelessWidget {
                   ),
                   2.horizontalSpace,
                   Text(
-                    "11.4 كم".tr(),
+                    "11.4 ${"km".tr()}",
                     style: TextStyles.textStyleRegular11.copyWith(
                       color: ColorsManager.textSecondary,
                     ),
@@ -82,7 +82,7 @@ class TripDetailsContent extends StatelessWidget {
                   ),
                   2.horizontalSpace,
                   Text(
-                    "~26 دقيقة".tr(),
+                    "~26 ${"minutes_short".tr()}",
                     style: TextStyles.textStyleRegular11.copyWith(
                       color: ColorsManager.textSecondary,
                     ),

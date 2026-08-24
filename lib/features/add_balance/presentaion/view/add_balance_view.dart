@@ -47,7 +47,7 @@ class _AddBalanceViewState extends State<AddBalanceView> {
                   ),
                   4.verticalSpace,
                   Text(
-                    "8.750 د.ك",
+                    "8.750 ${"kwd".tr()}",
                     style: TextStyles.textStyleBold32.copyWith(
                       color: ColorsManager.brandPrimary,
                     ),
@@ -73,7 +73,7 @@ class _AddBalanceViewState extends State<AddBalanceView> {
 
             AppTextFormField(
               controller: amountController,
-              hintText: "add_custtom_balance".tr(),
+              hintText: "add_custom_balance".tr(),
             ),
 
             24.verticalSpace,

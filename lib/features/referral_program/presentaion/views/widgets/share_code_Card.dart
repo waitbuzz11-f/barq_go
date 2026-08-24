@@ -90,7 +90,7 @@ class ShareCodeCard extends StatelessWidget {
                       ),
                       4.verticalSpace,
                       Text(
-                        "مكتسب".tr(),
+                        "earned".tr(),
                         style: TextStyles.textStyleRegular11.copyWith(
                           color: ColorsManager.textSecondary,
                         ),

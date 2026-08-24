@@ -29,7 +29,7 @@ class BarqGo extends StatelessWidget {
         localizationsDelegates: context.localizationDelegates,
         supportedLocales: context.supportedLocales,
         locale: context.locale,
-        title: 'Barq Go',
+        title: 'barq_go'.tr(),
         initialRoute: Routes.splash,
         onGenerateRoute: appRouter.generateRoute,
         navigatorKey: navigatorKey,

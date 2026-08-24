@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 class AppErrorState extends StatelessWidget {
@@ -8,7 +9,7 @@ class AppErrorState extends StatelessWidget {
 
   const AppErrorState({
     super.key,
-    this.title = 'Something went wrong',
+    this.title = 'something_went_wrong',
     this.actionText,
     this.onRetry,
     this.onBack,
@@ -22,28 +23,19 @@ class AppErrorState extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Icon(
-              Icons.error_outline,
-              size: 64,
-            ),
+            const Icon(Icons.error_outline, size: 64),
             const SizedBox(height: 16),
-            Text(
-              title,
-              textAlign: TextAlign.center,
-            ),
+            Text(title.tr(), textAlign: TextAlign.center),
             if (onRetry != null) ...[
               const SizedBox(height: 24),
               ElevatedButton(
                 onPressed: onRetry,
-                child: Text(actionText ?? 'Retry'),
+                child: Text((actionText ?? 'retry').tr()),
               ),
             ],
             if (onBack != null) ...[
               const SizedBox(height: 12),
-              OutlinedButton(
-                onPressed: onBack,
-                child: const Text('Back'),
-              ),
+              OutlinedButton(onPressed: onBack, child: Text('back'.tr())),
             ],
           ],
         ),

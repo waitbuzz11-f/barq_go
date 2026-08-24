@@ -24,7 +24,7 @@ class TransactionType extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 33.w, vertical: 16.h),
+      padding: EdgeInsets.symmetric(vertical: 16.h),
       decoration: BoxDecoration(
         color: ColorsManager.darkBackground,
         borderRadius: BorderRadius.only(
@@ -35,13 +35,15 @@ class TransactionType extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: List.generate(type.length, (index) {
-          return InkWell(
-            onTap: () {
-              context.pushNamed(routesNavigte[index]);
-            },
-            child: TransactionTypeElement(
-              imgPath: imgPath[index],
-              type: type[index],
+          return Expanded(
+            child: InkWell(
+              onTap: () {
+                context.pushNamed(routesNavigte[index]);
+              },
+              child: TransactionTypeElement(
+                imgPath: imgPath[index],
+                type: type[index],
+              ),
             ),
           );
         }),
@@ -59,19 +61,17 @@ class TransactionTypeElement extends StatelessWidget {
   final String imgPath, type;
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Column(
-        children: [
-          AppSvgHandler(assetPath: imgPath),
-          5.verticalSpace,
-          Text(
-            type.tr(),
-            style: TextStyles.textStyleMedium11.copyWith(
-              color: ColorsManager.surfacePrimary.withAlpha(70),
-            ),
+    return Column(
+      children: [
+        AppSvgHandler(assetPath: imgPath),
+        5.verticalSpace,
+        Text(
+          type.tr(),
+          style: TextStyles.textStyleMedium11.copyWith(
+            color: ColorsManager.surfacePrimary.withAlpha(70),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

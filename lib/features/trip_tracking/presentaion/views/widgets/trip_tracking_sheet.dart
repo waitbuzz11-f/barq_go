@@ -2,58 +2,22 @@ import 'package:barq_go/core/themes/colors_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class TripTrackingSheet extends StatefulWidget {
+class TripTrackingSheet extends StatelessWidget {
   const TripTrackingSheet({
     super.key,
     required this.content,
-    required this.contentKey,
     required this.extent,
   });
 
   final Widget content;
-  final Key contentKey;
   final double extent;
-
-  @override
-  State<TripTrackingSheet> createState() => _TripTrackingSheetState();
-}
-
-class _TripTrackingSheetState extends State<TripTrackingSheet> {
-  static const double _minExtent = 0.25;
-  static const double _maxExtent = 0.60;
-
-  final DraggableScrollableController _sheetController =
-      DraggableScrollableController();
-
-  double get _extent =>
-      widget.extent.clamp(_minExtent, _maxExtent).toDouble();
-
-  @override
-  void didUpdateWidget(covariant TripTrackingSheet oldWidget) {
-    super.didUpdateWidget(oldWidget);
-
-    if (oldWidget.extent != widget.extent && _sheetController.isAttached) {
-      _sheetController.animateTo(
-        _extent,
-        duration: const Duration(milliseconds: 250),
-        curve: Curves.easeInOut,
-      );
-    }
-  }
-
-  @override
-  void dispose() {
-    _sheetController.dispose();
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
     return DraggableScrollableSheet(
-      controller: _sheetController,
-      initialChildSize: _extent,
-      minChildSize: _minExtent,
-      maxChildSize: _maxExtent,
+      initialChildSize: extent,
+      minChildSize: 0.25,
+      maxChildSize: 0.90,
       snap: true,
       builder: (context, scrollController) {
         return Container(
@@ -67,15 +31,7 @@ class _TripTrackingSheetState extends State<TripTrackingSheet> {
           ),
           child: CustomScrollView(
             controller: scrollController,
-            slivers: [
-              SliverFillRemaining(
-                hasScrollBody: true,
-                child: KeyedSubtree(
-                  key: widget.contentKey,
-                  child: widget.content,
-                ),
-              ),
-            ],
+            slivers: [SliverToBoxAdapter(child: content)],
           ),
         );
       },

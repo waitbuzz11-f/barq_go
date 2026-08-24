@@ -9,5 +9,13 @@ enum TripStep {
   driverInTheWay,
   tripInProgress,
   tripCompleted,
- tripReview,
+  tripReview,
+  chooseServiceType,
+  timeYouWantService,
+  deliverTypeContentForm,
+  deliveryFee,
+  trackPackage,
+  orderSummary,
+  providerOnTheWay, 
+  providerVerification
 }

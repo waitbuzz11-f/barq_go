@@ -3,6 +3,7 @@ import 'dart:async';
 import 'constants.dart';
 import 'shared_pref_helper.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter/foundation.dart';
 
@@ -115,19 +116,20 @@ class NotificationHandler {
     String body,
     Map<String, dynamic> data,
   ) async {
-    const AndroidNotificationDetails androidDetails =
+    final AndroidNotificationDetails androidDetails =
         AndroidNotificationDetails(
           'channel_id',
-          'channel_name',
+          'notification_channel_name'.tr(),
+          channelDescription: 'notification_channel_description'.tr(),
           importance: Importance.max,
           priority: Priority.high,
           playSound: true,
           enableVibration: true,
         );
 
-    const NotificationDetails details = NotificationDetails(
+    final NotificationDetails details = NotificationDetails(
       android: androidDetails,
-      iOS: DarwinNotificationDetails(
+      iOS: const DarwinNotificationDetails(
         presentAlert: true,
         presentBadge: true,
         presentSound: true,
@@ -152,8 +154,8 @@ class NotificationHandler {
 
       unawaited(
         showLocalNotification(
-          message.notification?.title ?? "New Notification",
-          message.notification?.body ?? "You have a new message.",
+          message.notification?.title ?? 'new_notification'.tr(),
+          message.notification?.body ?? 'new_message_body'.tr(),
           message.data,
         ).catchError((_) {}),
       );

@@ -39,7 +39,7 @@ class EditProfileView extends StatelessWidget {
               ),
             ),
             6.verticalSpace,
-            AppTextFormField(hintText: 'full_name_hint'),
+            AppTextFormField(hintText: 'full_name_hint'.tr()),
             // 2
             Text(
               "phone_number".tr(),
@@ -48,7 +48,7 @@ class EditProfileView extends StatelessWidget {
               ),
             ),
             6.verticalSpace,
-            AppTextFormField(hintText: 'phone_number_hint'),
+            AppTextFormField(hintText: 'phone_number_hint'.tr()),
             // 3
             Text(
               "email".tr(),
@@ -57,7 +57,7 @@ class EditProfileView extends StatelessWidget {
               ),
             ),
             6.verticalSpace,
-            AppTextFormField(hintText: 'email_hint'),
+            AppTextFormField(hintText: 'email_hint'.tr()),
           ],
         ),
       ),

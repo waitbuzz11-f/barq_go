@@ -21,6 +21,7 @@ import 'package:barq_go/features/saved_location/presentaion/views/saved_location
 import 'package:barq_go/features/splash/presenation/views/splash_view.dart';
 import 'package:barq_go/features/trusted_contacts/presentaion/views/trusted_contacts_view.dart';
 import 'package:barq_go/features/wallet/presentaion/views/wallet_view.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -136,7 +137,7 @@ class AppRouter {
       default:
         return MaterialPageRoute(
           builder: (_) =>
-              const Scaffold(body: Center(child: Text('Route Not Found'))),
+              Scaffold(body: Center(child: Text('route_not_found'.tr()))),
         );
     }
   }

@@ -9,8 +9,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class DriverOnTheWayContent extends StatelessWidget {
-  const DriverOnTheWayContent({super.key, required this.startTrip, required this.startChat});
-  final Function () startTrip, startChat;
+  const DriverOnTheWayContent({
+    super.key,
+    required this.startTrip,
+    required this.startChat,
+  });
+  final Function() startTrip, startChat;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -83,7 +87,7 @@ class DriverOnTheWayContent extends StatelessWidget {
                   Column(
                     children: [
                       Text(
-                        "٣ د",
+                        "3 ${"minutes_short".tr()}",
                         style: TextStyles.textStyleBold22.copyWith(
                           color: ColorsManager.brandPrimary,
                         ),

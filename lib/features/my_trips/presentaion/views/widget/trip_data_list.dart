@@ -1,7 +1,9 @@
 import 'package:barq_go/core/resources/image_manager.dart';
 import 'package:barq_go/core/themes/app_text_styles.dart';
 import 'package:barq_go/core/themes/colors_manager.dart';
+import 'package:barq_go/core/widgets/app_button_widget.dart';
 import 'package:barq_go/core/widgets/app_svg_handler.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -16,10 +18,10 @@ class TripDataList extends StatelessWidget {
         itemCount: 2,
         separatorBuilder: (_, __) => 8.verticalSpace,
         itemBuilder: (context, index) {
-          return const TripDataCard(
-            subTitle: "طرد",
+          return TripDataCard(
+            subTitle: "package".tr(),
             title: "16 يوليو",
-            value: '1.800 د.ك',
+            value: '1.800 ${"kwd".tr()}',
           );
         },
       ),
@@ -27,7 +29,7 @@ class TripDataList extends StatelessWidget {
   }
 }
 
-class TripDataCard extends StatelessWidget {
+class TripDataCard extends StatefulWidget {
   const TripDataCard({
     super.key,
     required this.title,
@@ -39,6 +41,12 @@ class TripDataCard extends StatelessWidget {
   final String subTitle;
   final String value;
 
+  @override
+  State<TripDataCard> createState() => _TripDataCardState();
+}
+
+class _TripDataCardState extends State<TripDataCard> {
+  bool isRowShow = false;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -72,10 +80,10 @@ class TripDataCard extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(title, style: TextStyles.textStyleBold13),
+                    Text(widget.title, style: TextStyles.textStyleBold13),
                     3.verticalSpace,
                     Text(
-                      subTitle,
+                      widget.subTitle,
                       style: TextStyles.textStyleRegular11.copyWith(
                         color: ColorsManager.textSecondary,
                       ),
@@ -86,7 +94,7 @@ class TripDataCard extends StatelessWidget {
 
               Column(
                 children: [
-                  Text(value, style: TextStyles.textStyleExtraBold14),
+                  Text(widget.value, style: TextStyles.textStyleExtraBold14),
                   Container(
                     padding: EdgeInsets.symmetric(
                       horizontal: 8.w,
@@ -98,7 +106,7 @@ class TripDataCard extends StatelessWidget {
                       borderRadius: BorderRadius.circular(12.r),
                     ),
                     child: Text(
-                      subTitle,
+                      widget.subTitle,
                       style: TextStyles.textStyleRegular11.copyWith(
                         color: ColorsManager.textSecondary,
                       ),
@@ -111,37 +119,58 @@ class TripDataCard extends StatelessWidget {
 
           12.verticalSpace,
 
-          Container(
-            width: double.infinity,
-            padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 12.h),
-            decoration: BoxDecoration(
-              color: ColorsManager.surfaceSecondary,
-              borderRadius: BorderRadius.circular(12.r),
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                _LocationItem(
-                  color: ColorsManager.categoryInterCity,
-                  title: "شرق، برج الكويت",
-                ),
-
-                Padding(
-                  padding: EdgeInsetsDirectional.only(start: 3.5.w),
-                  child: Container(
-                    width: 1.w,
-                    height: 20.h,
-                    color: ColorsManager.darkLight.withAlpha(30),
+          InkWell(
+            onTap: () {
+              isRowShow = !isRowShow;
+              setState(() {});
+            },
+            child: Container(
+              width: double.infinity,
+              padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 12.h),
+              decoration: BoxDecoration(
+                color: ColorsManager.surfaceSecondary,
+                borderRadius: BorderRadius.circular(12.r),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  _LocationItem(
+                    color: ColorsManager.categoryInterCity,
+                    title: "شرق، برج الكويت",
                   ),
-                ),
 
-                _LocationItem(
-                  color: ColorsManager.danger,
-                  title: "حولي، شارع تونس",
-                ),
-              ],
+                  Padding(
+                    padding: EdgeInsetsDirectional.only(start: 3.5.w),
+                    child: Container(
+                      width: 1.w,
+                      height: 20.h,
+                      color: ColorsManager.darkLight.withAlpha(30),
+                    ),
+                  ),
+
+                  _LocationItem(
+                    color: ColorsManager.danger,
+                    title: "حولي، شارع تونس",
+                  ),
+                ],
+              ),
             ),
           ),
+          16.verticalSpace,
+          if (isRowShow) Divider(color: ColorsManager.border),
+          if (isRowShow)
+            Row(
+              children: [
+                Expanded(
+                  child: AppButtonWidget(
+                    text: "details",
+                    backgroundColor: ColorsManager.surfaceSecondary,
+                  ),
+                ),
+                8.horizontalSpace,
+                Expanded(child: AppButtonWidget(text: "rebook")),
+              ],
+            ),
         ],
       ),
     );

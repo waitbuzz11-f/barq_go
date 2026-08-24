@@ -23,23 +23,25 @@ class _ChooseVehicleTypeContentState extends State<ChooseVehicleTypeContent> {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisSize: MainAxisSize.min,
       children: [
-        Expanded(
-          child: ListView.separated(
-            itemCount: 2,
-            separatorBuilder: (context, index) => 8.verticalSpace,
-            itemBuilder: (context, index) {
-              return InkWell(
-                onTap: () {
-                  setState(() {
-                    currentIndex = index;
-                  });
-                },
-                borderRadius: BorderRadius.circular(16.r),
-                child: VehicleTypeCard(isSelected: currentIndex == index),
-              );
-            },
-          ),
+        ListView.separated(
+          shrinkWrap: true,
+          physics: const NeverScrollableScrollPhysics(),
+          padding: EdgeInsets.zero,
+          itemCount: 2,
+          separatorBuilder: (context, index) => 8.verticalSpace,
+          itemBuilder: (context, index) {
+            return InkWell(
+              onTap: () {
+                setState(() {
+                  currentIndex = index;
+                });
+              },
+              borderRadius: BorderRadius.circular(16.r),
+              child: VehicleTypeCard(isSelected: currentIndex == index),
+            );
+          },
         ),
 
         16.verticalSpace,
@@ -102,7 +104,7 @@ class VehicleTypeCard extends StatelessWidget {
             ),
             2.horizontalSpace,
             Text(
-              "٦ د",
+              "6 ${"minutes_short".tr()}",
               style: TextStyles.textStyleSemiBold11.copyWith(
                 color: ColorsManager.textSecondary,
               ),

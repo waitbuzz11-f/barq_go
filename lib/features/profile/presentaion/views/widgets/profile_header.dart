@@ -18,7 +18,7 @@ class ProfileHeader extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("driver_name".tr(), style: TextStyles.textStyleBold20),
+            Text("Kawther Walid", style: TextStyles.textStyleBold20),
             Text(
               "driver_phone".tr(),
               style: TextStyles.textStyleRegular13.copyWith(

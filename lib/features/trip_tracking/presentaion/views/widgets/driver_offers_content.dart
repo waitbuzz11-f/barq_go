@@ -16,6 +16,8 @@ class DriverOffersContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
       padding: EdgeInsets.zero,
       itemCount: 3,
       separatorBuilder: (context, index) {
@@ -113,7 +115,7 @@ class DriverOfferCard extends StatelessWidget {
                         4.horizontalSpace,
 
                         Text(
-                          "4.8 • ٣ د",
+                          "4.8 • 3 ${"minutes_short".tr()}",
                           style: TextStyles.textStyleRegular12.copyWith(
                             color: ColorsManager.textSecondary,
                           ),

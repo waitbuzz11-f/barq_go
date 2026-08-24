@@ -33,7 +33,7 @@ class FilterTripsTap extends StatelessWidget {
           tabs: [
             Tab(text: "all".tr()),
             Tab(text: "complete".tr()),
-            Tab(text: "canceeled".tr()),
+            Tab(text: "cancelled".tr()),
           ],
         ),
       ),

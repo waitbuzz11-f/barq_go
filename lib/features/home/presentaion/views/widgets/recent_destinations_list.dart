@@ -8,23 +8,22 @@ class RecentDestinationsList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: ListView.separated(
-        scrollDirection: Axis.vertical,
-        shrinkWrap: true,
-        itemBuilder: (context, index) {
-          return RecentLocationCard(
-            imgPath: Assets.assetsImagesPngHome,
-            title: "home",
-            subTitle: "hawally_street_17",
-            time: "5:00 m",
-          );
-        },
-        separatorBuilder: (context, index) {
-          return Divider(color: ColorsManager.darkLight.withAlpha(8));
-        },
-        itemCount: 2,
-      ),
+    return ListView.separated(
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
+      padding: EdgeInsets.zero,
+      itemBuilder: (context, index) {
+        return RecentLocationCard(
+          imgPath: Assets.assetsImagesPngHome,
+          title: "home",
+          subTitle: "hawally_street_17",
+          time: "5:00 m",
+        );
+      },
+      separatorBuilder: (context, index) {
+        return Divider(color: ColorsManager.darkLight.withAlpha(8));
+      },
+      itemCount: 2,
     );
   }
 }

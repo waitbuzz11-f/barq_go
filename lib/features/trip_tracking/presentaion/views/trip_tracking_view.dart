@@ -2,13 +2,21 @@ import 'package:barq_go/core/enum/trip_step.dart';
 import 'package:barq_go/features/home/presentaion/views/widgets/map_widget.dart';
 import 'package:barq_go/features/trip_tracking/presentaion/cubit/trip_tracking_cubit.dart';
 import 'package:barq_go/features/trip_tracking/presentaion/views/widgets/choose_price_content.dart';
+import 'package:barq_go/features/trip_tracking/presentaion/views/widgets/choose_service_type_content.dart';
 import 'package:barq_go/features/trip_tracking/presentaion/views/widgets/choose_vehicle_type_content.dart';
 import 'package:barq_go/features/trip_tracking/presentaion/views/widgets/confuirm_location_content.dart';
+import 'package:barq_go/features/trip_tracking/presentaion/views/widgets/delivery_fee_content.dart';
 import 'package:barq_go/features/trip_tracking/presentaion/views/widgets/detect_location_header.dart';
 import 'package:barq_go/features/trip_tracking/presentaion/views/widgets/driver_offers_content.dart';
 import 'package:barq_go/features/trip_tracking/presentaion/views/widgets/driver_on_the_way_content.dart';
+import 'package:barq_go/features/trip_tracking/presentaion/views/widgets/form_deliver_type/form_deliver_type_content.dart';
 import 'package:barq_go/features/trip_tracking/presentaion/views/widgets/location_sugestion_content.dart';
+import 'package:barq_go/features/trip_tracking/presentaion/views/widgets/order_summary_content.dart';
+import 'package:barq_go/features/trip_tracking/presentaion/views/widgets/provider_on_the_way.dart';
+import 'package:barq_go/features/trip_tracking/presentaion/views/widgets/provider_verfication_content.dart';
 import 'package:barq_go/features/trip_tracking/presentaion/views/widgets/searching_for_driver_content.dart';
+import 'package:barq_go/features/trip_tracking/presentaion/views/widgets/service_time_content.dart';
+import 'package:barq_go/features/trip_tracking/presentaion/views/widgets/track_package_content.dart';
 import 'package:barq_go/features/trip_tracking/presentaion/views/widgets/trip_completed_content.dart';
 import 'package:barq_go/features/trip_tracking/presentaion/views/widgets/trip_details_content.dart';
 import 'package:barq_go/features/trip_tracking/presentaion/views/widgets/trip_in_progress_content.dart';
@@ -51,6 +59,22 @@ class TripTrackingView extends StatelessWidget {
         return 0.3;
       case TripStep.tripReview:
         return 0.45;
+      case TripStep.chooseServiceType:
+        return 0.50;
+      case TripStep.timeYouWantService:
+        return 0.30;
+      case TripStep.deliverTypeContentForm:
+        return 0.90;
+      case TripStep.deliveryFee:
+        return 0.30;
+      case TripStep.trackPackage:
+        return 0.55;
+      case TripStep.orderSummary:
+        return 0.40;
+      case TripStep.providerOnTheWay:
+        return 0.40;
+      case TripStep.providerVerification:
+        return 0.50;
     }
   }
 
@@ -84,6 +108,22 @@ class TripTrackingView extends StatelessWidget {
         return 'trip_completed';
       case TripStep.tripReview:
         return 'trip_review';
+      case TripStep.chooseServiceType:
+        return 'transport_and_flatbeds';
+      case TripStep.timeYouWantService:
+        return 'service_time';
+      case TripStep.deliverTypeContentForm:
+        return 'package_details';
+      case TripStep.deliveryFee:
+        return 'delivery_pricing';
+      case TripStep.trackPackage:
+        return 'track_package';
+      case TripStep.orderSummary:
+        return 'order_summary';
+      case TripStep.providerOnTheWay:
+        return 'provider_on_the_way';
+      case TripStep.providerVerification:
+        return "provider_verification";
     }
   }
 
@@ -124,6 +164,22 @@ class TripTrackingView extends StatelessWidget {
         return TripCompletedContent(makeReview: cubit.makeReview);
       case TripStep.tripReview:
         return const TripReviewContent();
+      case TripStep.chooseServiceType:
+        return const ChooseServiceTypeContent();
+      case TripStep.timeYouWantService:
+        return const ServiceTimeContent();
+      case TripStep.deliverTypeContentForm:
+        return const FormDeliverTypeContent();
+      case TripStep.deliveryFee:
+        return const DeliveryFeeContent();
+      case TripStep.trackPackage:
+        return const TrackPackageContent();
+      case TripStep.orderSummary:
+        return const OrderSummaryContent();
+      case TripStep.providerOnTheWay:
+        return const ProviderOnTheWay();
+      case TripStep.providerVerification:
+        return const ProviderVerficationContent();
     }
   }
 
@@ -146,7 +202,7 @@ class TripTrackingView extends StatelessWidget {
 
               Positioned.fill(
                 child: TripTrackingSheet(
-                  contentKey: ValueKey(step),
+                  key: ValueKey(step),
                   extent: _getSheetExtent(step),
                   content: _buildContent(context, step),
                 ),

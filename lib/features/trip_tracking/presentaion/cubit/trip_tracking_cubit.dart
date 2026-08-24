@@ -73,6 +73,22 @@ class TripTrackingCubit extends Cubit<TripStep> {
         emit(TripStep.tripCompleted);
       case TripStep.tripReview:
         emit(TripStep.tripReview);
+      case TripStep.chooseServiceType:
+        emit(TripStep.chooseServiceType);
+      case TripStep.timeYouWantService:
+        emit(TripStep.timeYouWantService);
+      case TripStep.deliverTypeContentForm:
+        emit(TripStep.deliverTypeContentForm);
+      case TripStep.deliveryFee:
+        emit(TripStep.deliveryFee);
+      case TripStep.trackPackage:
+        emit(TripStep.trackPackage);
+      case TripStep.orderSummary:
+        emit(TripStep.orderSummary);
+      case TripStep.providerOnTheWay:
+        emit(TripStep.providerOnTheWay);
+      case TripStep.providerVerification:
+        emit(TripStep.providerVerification);
     }
   }
 }

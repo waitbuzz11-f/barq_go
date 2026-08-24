@@ -1,4 +1,4 @@
-import 'package:barq_go/features/saved_location/presentaion/views/widgets/delete_location_dialog.dart';
+import 'package:barq_go/core/widgets/custtom_warning_sheet.dart';
 import 'package:barq_go/features/saved_location/presentaion/views/widgets/saved_location_card_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -26,7 +26,11 @@ class SavedLocationsList extends StatelessWidget {
               showModalBottomSheet(
                 context: context,
                 builder: (context) {
-                  return DeleteLocationDialog();
+                  return CustomWarningSheet(
+                    title: "delete_location",
+                    subTitle: "delete_location_confirmation",
+                    confuirmButtonTitle: "delete",
+                  );
                 },
               );
             },

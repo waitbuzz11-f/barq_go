@@ -26,6 +26,7 @@ class LocationPolicy extends StatelessWidget {
             10.verticalSpace,
             Text(
               "location_required_description".tr(),
+              textAlign: TextAlign.center,
               style: TextStyles.textStyleRegular14.copyWith(
                 color: ColorsManager.textSecondary,
               ),
