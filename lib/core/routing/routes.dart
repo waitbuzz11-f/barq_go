@@ -37,4 +37,8 @@ class Routes {
   static const String referralProgram = 'referralProgram';
   // notifications
   static const String notification = 'notification';
+  // help center
+  static const String helpCenter = 'helpCenter';
+  // add location
+  static const String addLocation = 'addLocation';
 }

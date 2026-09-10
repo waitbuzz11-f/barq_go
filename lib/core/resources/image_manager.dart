@@ -54,6 +54,10 @@ class Assets {
   /// assets/images/icons/edit.svg
   static const String assetsImagesIconsEdit = "assets/images/icons/edit.svg";
 
+  /// Assets for assetsImagesIconsError
+  /// assets/images/icons/error.svg
+  static const String assetsImagesIconsError = "assets/images/icons/error.svg";
+
   /// Assets for assetsImagesIconsGift
   /// assets/images/icons/gift.svg
   static const String assetsImagesIconsGift = "assets/images/icons/gift.svg";
@@ -202,9 +206,37 @@ class Assets {
   /// assets/images/png/profile_logo.png
   static const String assetsImagesPngProfileLogo = "assets/images/png/profile_logo.png";
 
+  /// Assets for assetsImagesPngReportSafetyIssue
+  /// assets/images/png/report_safety_issue.png
+  static const String assetsImagesPngReportSafetyIssue = "assets/images/png/report_safety_issue.png";
+
+  /// Assets for assetsImagesPngRequestEmergencyHelp
+  /// assets/images/png/request_emergency_help.png
+  static const String assetsImagesPngRequestEmergencyHelp = "assets/images/png/request_emergency_help.png";
+
+  /// Assets for assetsImagesPngSafetyTips
+  /// assets/images/png/safety_tips.png
+  static const String assetsImagesPngSafetyTips = "assets/images/png/safety_tips.png";
+
+  /// Assets for assetsImagesPngShareTrip
+  /// assets/images/png/share_trip.png
+  static const String assetsImagesPngShareTrip = "assets/images/png/share_trip.png";
+
   /// Assets for assetsImagesPngTard
   /// assets/images/png/tard.png
   static const String assetsImagesPngTard = "assets/images/png/tard.png";
+
+  /// Assets for assetsImagesPngTripCode
+  /// assets/images/png/trip_code.png
+  static const String assetsImagesPngTripCode = "assets/images/png/trip_code.png";
+
+  /// Assets for assetsImagesPngTrustedContacts
+  /// assets/images/png/trusted_contacts.png
+  static const String assetsImagesPngTrustedContacts = "assets/images/png/trusted_contacts.png";
+
+  /// Assets for assetsImagesPngVerifyDriverIdentity
+  /// assets/images/png/verify_driver_identity.png
+  static const String assetsImagesPngVerifyDriverIdentity = "assets/images/png/verify_driver_identity.png";
 
   /// Assets for assetsImagesPrize
   /// assets/images/prize.svg

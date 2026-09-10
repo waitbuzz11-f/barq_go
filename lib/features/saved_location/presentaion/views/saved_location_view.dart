@@ -1,4 +1,6 @@
+import 'package:barq_go/core/helper/extensions.dart';
 import 'package:barq_go/core/resources/image_manager.dart';
+import 'package:barq_go/core/routing/routes.dart';
 import 'package:barq_go/core/themes/colors_manager.dart';
 import 'package:barq_go/core/widgets/app_button_widget.dart';
 import 'package:barq_go/core/widgets/app_svg_handler.dart';
@@ -26,6 +28,9 @@ class SavedLocationView extends StatelessWidget {
               textColor: ColorsManager.brandPrimary,
               backgroundColor: ColorsManager.surfaceSecondary,
               icon: AppSvgHandler(assetPath: Assets.assetsImagesIconsAdd),
+              onTap: () {
+                context.pushNamed(Routes.addLocation);
+              },
             ),
           ),
         ],

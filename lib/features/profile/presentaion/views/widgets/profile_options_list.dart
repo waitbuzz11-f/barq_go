@@ -62,7 +62,7 @@ class ProfileOptionsList extends StatelessWidget {
     "/safetyCenter",
     Routes.notification,
     "/settings",
-    "/helpSupport",
+    Routes.helpCenter,
     "/termsPrivacy",
     null,
   ];

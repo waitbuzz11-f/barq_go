@@ -278,12 +278,21 @@
 "are_you_sure_want_logout": "هل أنت متأكد من تسجيل الخروج؟",
 "logout_confirmation_subtitle": "ستحتاج إلى تسجيل الدخول مرة أخرى للوصول إلى حسابك.",
 "loading_message": "جارٍ التحميل...",
-"retry_again_message": "يرجى المحاولة مرة أخرى."
-
-
-
-
-
-
-
+"retry_again_message": "يرجى المحاولة مرة أخرى.",
+ "request_emergency_help": "طلب المساعدة الطارئة",
+  "share_trip": "مشاركة الرحلة",
+  "trip_code": "رمز الرحلة",
+  "verify_driver_identity": "التحقق من هوية السائق",
+  "report_safety_issue": "الإبلاغ عن مشكلة أمان",
+  "safety_tips": "نصائح السلامة",
+  "contact_authorities": "الاتصال بالجهات الأمنية",
+  "send_tracking_link_to_trusted_person": "أرسل رابط تتبع لشخص موثوق",
+  "auto_share_with_trusted_contacts": "مشاركة تلقائية مع جهات موثوقة",
+  "start_code": "رمز البدء: 4821",
+  "verify_driver_details_match": "تأكد من مطابقة بيانات السائق",
+  "incorrect_driver_or_vehicle_details": "بيانات السائق أو المركبة غير صحيحة",
+  "safe_trip_guidelines": "إرشادات لرحلة آمنة",
+   "security_emergency": "طوارئ أمنية",
+  "activate_emergency_assistance_confirmation": "هل تريد تفعيل مساعدة الطوارئ؟ سيتم إخطار فريق أماننا وجهات اتصالك الموثوقة فوراً.",
+  "yes_request_help": "نعم، اطلب المساعدة"
 }

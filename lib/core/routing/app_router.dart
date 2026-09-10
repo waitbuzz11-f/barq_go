@@ -4,9 +4,11 @@ import 'package:barq_go/core/widgets/main_layout/presentaion/cubit/main_layout_c
 import 'package:barq_go/core/widgets/main_layout/presentaion/views/main_layout.dart';
 import 'package:barq_go/features/add_balance/presentaion/view/add_balance_status.dart';
 import 'package:barq_go/features/add_balance/presentaion/view/add_balance_view.dart';
+import 'package:barq_go/features/add_location/presentaion/views/add_location_view.dart';
 import 'package:barq_go/features/auth/presentaion/cubit/auth_cubit.dart';
 import 'package:barq_go/features/auth/presentaion/views/login_view.dart';
 import 'package:barq_go/features/auth/presentaion/views/otp_view.dart';
+import 'package:barq_go/features/help_center/presentation/views/help_center_view.dart';
 import 'package:barq_go/features/trip_tracking/presentaion/cubit/trip_tracking_cubit.dart';
 import 'package:barq_go/features/trip_tracking/presentaion/views/trip_tracking_view.dart';
 import 'package:barq_go/features/edit_profile.dart/presentaion/views/edit_profile_view.dart';
@@ -134,6 +136,13 @@ class AppRouter {
       // notfications
       case Routes.notification:
         return _fadeRoute(const NotificationView(), settings);
+      // help center
+      case Routes.helpCenter:
+        return _fadeRoute(const HelpCenterView(), settings);
+
+      // add location   case Routes.helpCenter:
+      case Routes.addLocation:
+        return _fadeRoute(const AddLocationView(), settings);
       default:
         return MaterialPageRoute(
           builder: (_) =>
